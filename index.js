@@ -20,11 +20,18 @@ const PORT = process.env.PORT || 10000;
 const routes = require('./routes/routes');
 app.use('/api', routes);
 
-
+/*
 app.listen(PORT, () => {
  console.log(`Server Started at ${PORT}`)
 })
+*/
 
+app.listen({
+    host:'0.0.0.0',
+    port: process.env.PORT ? Number(process.env.PORT) : 10000,
+}).then(() => {
+    console.log(`Server Started at ${PORT}`)
+})
 // Obtendo os parametros passados pela linha de comando
 
 var userArgs = process.argv.slice(2);
