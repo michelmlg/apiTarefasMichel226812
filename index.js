@@ -29,7 +29,7 @@ app.listen(PORT, () => {
 
 var userArgs = process.argv.slice(2);
 
-var mongoURL = userArgs[0].toString();
+var mongoURL = userArgs[0];
 
 //Configurando a conexao com o Banco de Dados
 
