@@ -14,7 +14,7 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 10000;
 
 //Direciona para o arquivo de rotas, o tratamento de todos os endpoints inciados pelo prefixo "/api"
 const routes = require('./routes/routes');
