@@ -1,4 +1,3 @@
-
 const express = require('express');
 
 const app = express();
@@ -15,7 +14,7 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 
-const PORT = process.env.PORT || 10000;
+const PORT = process.env.PORT || 3000;
 
 //Direciona para o arquivo de rotas, o tratamento de todos os endpoints inciados pelo prefixo "/api"
 const routes = require('./routes/routes');
@@ -28,9 +27,6 @@ app.listen(PORT, () => {
 
 // Obtendo os parametros passados pela linha de comando
 
-var userArgs = process.argv.slice(2);
-
-var mongoURL = userArgs[0];
 
 //Configurando a conexao com o Banco de Dados
 
